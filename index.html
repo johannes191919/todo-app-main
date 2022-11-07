@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Todo app</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div  class="container">
+    <div class="background_image" ><img src="images/bg-desktop-dark.jpg"></div>
+    <div class="content" >
+    <div class="title"><h1>TO DO</h1></div>
+    <div class="list" >
+      <ul id="sortlist" >
+        <li id="1_" class="input_li" >
+          <div class="list_item"><img  id="empty"  class="list_item check  " src="images/icon-check.svg"></div>
+          
+          <input class="list_item" id="input" type="text" placeholder="Create a new to do." >
+        </li>
+        
+        <li id="2" class="active _li" ><div  onclick='removecheck(this)' class="list_item"><img  id="empty"  class="list_item check  " src="images/icon-check.svg"></div><p class="list_item" >Complete online JavaScript course</p><img onclick=' removeparent(this)' class="cross" src="images/icon-cross.svg" ></li> 
+        <li id="3" class="active _li" ><div onclick='removecheck(this)' class="list_item"><img  id="empty"  class="list_item check  " src="images/icon-check.svg"></div><p class="list_item" >Jog around the park 3x</p><img  onclick=' removeparent(this)' class="cross"  src="images/icon-cross.svg" ></li>
+        <li id="4" class="active _li" ><div onclick='removecheck(this)' class="list_item"><img  id="empty"  class="list_item check  " src="images/icon-check.svg"></div><p class="list_item" >10 minatunes meditation  </p><img  onclick=' removeparent(this)' class="cross" src="images/icon-cross.svg" ></li>
+        <li id="5" class="active _li" ><div onclick='removecheck(this)' class="list_item"><img  id="empty"  class="list_item check  " src="images/icon-check.svg"></div><p class="list_item" >Read for one hour</p><img  onclick=' removeparent(this)' class="cross list_item " src="images/icon-cross.svg" ></li>
+        <li id="6" class="active _li" ><div onclick='removecheck(this)' class="list_item"><img  id="empty"  class="list_item check  " src="images/icon-check.svg"></div><p class="list_item">Pick up groceries</p><img   onclick=' removeparent(this)' class="cross" src="images/icon-cross.svg" ></li>
+        <li id="7" class="active _li" > <div onclick='removecheck(this)' class="list_item"><img  id="empty"  class="list_item check  " src="images/icon-check.svg"></div><p class="list_item" >Complete Todo App on Frontend Mentor</p><img onclick=' removeparent(this)'  class="cross" src="images/icon-cross.svg" > </li>
+        <li id="last_li"  class="last_list_item"> <p class="list_item ">6 items left</p>  <button onclick="showall()" id="show_all_button" class="list_item" >All</button><button onclick="filteractive()" id="active_filter_button" class="last_item" >Active</button><button class="list_item" onclick="filtercompleted()" >Completed</button> <button onclick="cleanfulfilled()" id="clean_fulfilled" class="list_item last_button" >Clear Completed</button></li>
+        </ul>
+    </div>
+
+
+
+  </div>
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script type="text/javascript" src="index.js" ></script>
+</body>
+</html>

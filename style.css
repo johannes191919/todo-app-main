@@ -45,7 +45,7 @@
 
     .container {
 
-        height: 100.0rem;
+        height: 75.0rem;
         overflow: scroll;
         position: relative;
 
@@ -174,7 +174,7 @@
     .content li {
         font-size: 18px;
         background-color: hsl(235, 24%, 19%);
-        padding: 1.5rem;
+        padding: 2.5rem;
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
         position: relative;

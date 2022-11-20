@@ -81,7 +81,7 @@
 
 
 
-        
+
 
     }
 
@@ -105,6 +105,10 @@
         display: none;
 
         position: absolute;
+    }
+
+    #theme_images:hover {
+        cursor: pointer;
     }
 
 
@@ -374,6 +378,10 @@
         width: 2.0rem;
         right: 13%;
         top: 2%
+    }
+
+    #theme_images:hover {
+        cursor: pointer;
     }
 
 

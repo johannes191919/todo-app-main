@@ -46,7 +46,7 @@
     .container {
 
         height: 90.0rem;
-        overflow: scroll;
+        overflow: auto;
         position: relative;
 
 

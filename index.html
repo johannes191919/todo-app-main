@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Todo app</title>
 
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -14,53 +16,109 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
 
-  <div  class="container">
-    <div class="background_image" ><img src="images/bg-desktop-dark.jpg"></div>
-    <div class="content" >
-    <div class="title"><h1>TO DO</h1></div>
-    <div id="theme_images">    <img id="dark_theme" src="images/icon-sun.svg" >
-      <img id="light_theme" src="images/icon-moon.svg"></div>
+  <div class="container">
 
-    <div class="list" >
-      <ul id="sortlist" >
-        <li id="1_" class="input_li" >
-          <div class="list_item" id="first_circle"><img  id="empty"  class="list_item check  " src="images/icon-check.svg"></div>
-          
-          <input class="list_item" id="input" type="text" placeholder="Create a new to do." >
-        </li>
-        
-        <li onmouseover="showcross(this)" onmouseleave="hidecross(this)" id="item_2" class="active _li" ><div  onclick='removecheck(this)' class="list_item"><img  id="empty"  class="list_item check  " src="images/icon-check.svg"></div><p class="list_item" >Complete online JavaScript course</p><img   onclick=' removeparent(this)' class="cross   " src="images/icon-cross.svg" ></li> 
-        <li onmouseover="showcross(this)" onmouseleave="hidecross(this)" id="3" class="active _li" ><div onclick='removecheck(this)' class="list_item"><img  id="empty"  class="list_item check  " src="images/icon-check.svg"></div><p class="list_item" >Jog around the park 3x</p><img  onclick=' removeparent(this)' class="cross   "  src="images/icon-cross.svg" ></li>
-        <li onmouseover="showcross(this)" onmouseleave="hidecross(this)" id="4" class="active _li" ><div onclick='removecheck(this)' class="list_item"><img  id="empty"  class="list_item check  " src="images/icon-check.svg"></div><p class="list_item" >10 minatunes meditation  </p><img  onclick=' removeparent(this)' class="cross   " src="images/icon-cross.svg" ></li>
-        <li onmouseover="showcross(this)" onmouseleave="hidecross(this)" id="5" class="active _li" ><div onclick='removecheck(this)' class="list_item"><img  id="empty"  class="list_item check  " src="images/icon-check.svg"></div><p class="list_item" >Read for one hour</p><img  onclick=' removeparent(this)' class="cross   " src="images/icon-cross.svg" ></li>
-        <li onmouseover="showcross(this)" onmouseleave="hidecross(this)" id="6" class="active _li" ><div onclick='removecheck(this)' class="list_item"><img  id="empty"  class="list_item check  " src="images/icon-check.svg"></div><p class="list_item">Pick up groceries</p><img   onclick=' removeparent(this)' class="cross   " src="images/icon-cross.svg" ></li>
-        <li onmouseover="showcross(this)" onmouseleave="hidecross(this)" id="7" class="active _li" > <div onclick='removecheck(this)' class="list_item"><img  id="empty"  class="list_item check  " src="images/icon-check.svg"></div><p class="list_item" >Complete Todo App on Frontend Mentor</p><img onclick=' removeparent(this)'  class="cross   " src="images/icon-cross.svg" > </li>
-        <li id="mobile_li" > <p class="list_item ">6 items left</p> <button onclick="cleanfulfilled()"  class="list_item button " id="mobile_clear_button" >Clear Completed</button>  </li>
-        <li  id="last_li"  class="last_list_item"> <p class="list_item ">6 items left</p>  <button onclick="showall()" id="show_all_button" class="list_item" >All</button><button onclick="filteractive()" id="active_filter_button" class="last_item button " >Active</button><button id="completed_button" class="list_item button" onclick="filtercompleted()" >Completed</button> <button onclick="cleanfulfilled()" id="clean_fulfilled" class="list_item button last_button" >Clear Completed</button></li>
-        </ul>
+    <div class="background_image"><img alt="background image dark theme" src="images/bg-desktop-dark.jpg"></div>
+    <div class="content">
+      <div class="title">
+        <h1>TO DO</h1>
+      </div>
+      <div id="theme_images"> <img alt="dark theme button" id="dark_theme" src="images/icon-sun.svg">
+        <img id="light_theme" alt="light theme button" src="images/icon-moon.svg">
+      </div>
+
+      <main>
+        <div class="list">
+          <ul id="sortlist">
+            <li id="1_" class="input_li">
+              <div class="list_item" id="first_circle"><img alt="check circle" id="empty" class="list_item check  "
+                  src="images/icon-check.svg"></div>
+
+              <input class="list_item" id="input" type="text" placeholder="Create a new to do.">
+            </li>
+
+            <li onmouseover="showcross(this)" onmouseleave="hidecross(this)" id="item_2" class="active _li">
+              <div onclick='removecheck(this)' class="list_item"><img id="empty" class="list_item check  "
+                  src="images/icon-check.svg"></div>
+              <p class="list_item">Complete online JavaScript course</p><img onclick=' removeparent(this)'
+                class="cross   " alt="close button" src="images/icon-cross.svg">
+            </li>
+            <li onmouseover="showcross(this)" onmouseleave="hidecross(this)" id="3" class="active _li">
+              <div onclick='removecheck(this)' class="list_item"><img alt="check circle" id="empty"
+                  class="list_item check  " src="images/icon-check.svg"></div>
+              <p class="list_item">Jog around the park 3x</p><img onclick=' removeparent(this)' class="cross   "
+                alt="close button" src="images/icon-cross.svg">
+            </li>
+            <li onmouseover="showcross(this)" onmouseleave="hidecross(this)" id="4" class="active _li">
+              <div onclick='removecheck(this)' class="list_item"><img alt="check circle" id="empty"
+                  class="list_item check  " src="images/icon-check.svg"></div>
+              <p class="list_item">10 minatunes meditation </p><img onclick=' removeparent(this)' class="cross   "
+                alt="close button" src="images/icon-cross.svg">
+            </li>
+            <li onmouseover="showcross(this)" onmouseleave="hidecross(this)" id="5" class="active _li">
+              <div onclick='removecheck(this)' class="list_item"><img alt="check circle" id="empty"
+                  class="list_item check  " src="images/icon-check.svg"></div>
+              <p class="list_item">Read for one hour</p><img onclick=' removeparent(this)' class="cross   "
+                alt="close button" src="images/icon-cross.svg">
+            </li>
+            <li onmouseover="showcross(this)" onmouseleave="hidecross(this)" id="6" class="active _li">
+              <div onclick='removecheck(this)' class="list_item"><img alt="check circle" id="empty"
+                  class="list_item check  " src="images/icon-check.svg"></div>
+              <p class="list_item">Pick up groceries</p><img onclick=' removeparent(this)' class="cross   "
+                alt="close button" src="images/icon-cross.svg">
+            </li>
+            <li onmouseover="showcross(this)" onmouseleave="hidecross(this)" id="7" class="active _li">
+              <div onclick='removecheck(this)' class="list_item"><img alt="check circle" id="empty"
+                  class="list_item check  " src="images/icon-check.svg"></div>
+              <p class="list_item">Complete Todo App on Frontend Mentor</p><img onclick=' removeparent(this)'
+                class="cross   " src="images/icon-cross.svg">
+            </li>
+            <li id="mobile_li">
+              <p class="list_item ">6 items left</p> <button onclick="cleanfulfilled()" class="list_item button "
+                id="mobile_clear_button">Clear Completed</button>
+            </li>
+            <li id="last_li" class="last_list_item">
+              <p class="list_item ">6 items left</p> <button onclick="showall()" id="show_all_button"
+                class="list_item">All</button><button onclick="filteractive()" id="active_filter_button"
+                class="last_item button ">Active</button><button id="completed_button" class="list_item button"
+                onclick="filtercompleted()">Completed</button> <button onclick="cleanfulfilled()" id="clean_fulfilled"
+                class="list_item button last_button">Clear Completed</button>
+            </li>
+          </ul>
+        </div>
+
+
+        <div id="last_p">
+          <p>Drag and drop to reorder list</p>
+        </div>
+
+
+
     </div>
+    </main>
+    <footer>
 
-
-    <div id="last_p"><p>Drag and drop to reorder list</p></div>
-
-
-
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
   </div>
-
-
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script type="text/javascript" src="index.js" ></script>
+  <script  src="index.js"></script>
 </body>
+
 </html>
